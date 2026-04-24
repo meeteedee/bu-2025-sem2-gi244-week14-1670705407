@@ -32,11 +32,17 @@ public class MainManager : MonoBehaviour
 
     public void SaveColor()
     {
-
+        PlayerPrefs.SetFloat("TeamColor.r", TeamColor.r);
+        PlayerPrefs.SetFloat("TeamColor.g", TeamColor.g);
+        PlayerPrefs.SetFloat("TeamColor.b", TeamColor.b);
+        PlayerPrefs.SetFloat("TeamColor.a", TeamColor.a);
     }
 
     public void LoadColor()
     {
-
+        TeamColor.r = PlayerPrefs.GetFloat("TeamColor.r");
+        TeamColor.g = PlayerPrefs.GetFloat("TeamColor.g");
+        TeamColor.b = PlayerPrefs.GetFloat("TeamColor.b");
+        TeamColor.a = PlayerPrefs.GetFloat("TeamColor.a");
     }
 }
